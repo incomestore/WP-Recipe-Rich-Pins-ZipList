@@ -16,7 +16,7 @@
  * 
  * @since 1.0.0
  */
-function rrpzl_add_og_sitename() {
+function rrpzl_add_og_site_name() {
 	
 	global $rrpzl_options;
 	
@@ -25,3 +25,18 @@ function rrpzl_add_og_sitename() {
 	}
 }
 add_action( 'wp_head', 'rrpzl_add_og_site_name' );
+
+/*
+ * Add URL itemprop to the header of the page
+ * 
+ * @since 1.0.0
+ */
+function rrpzl_add_url() {
+	
+	global $post;
+	
+	$permalink = get_permalink( $post->ID );
+	
+	echo '<link rel="canonical" href="' . $permalink . '" />';
+}
+add_action( 'wp_head', 'rrpzl_add_url' );
