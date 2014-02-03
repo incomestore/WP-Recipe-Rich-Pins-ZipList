@@ -76,14 +76,6 @@ class Recipe_Rich_Pins_For_ZipList {
 		
 		// Calls for Post Meta stuff
 		add_action( 'add_meta_boxes', array( $this, 'display_post_meta') );
-		//add_action( 'save_post', array( $this, 'save_meta_data') );
-		
-		// Add admin notice after plugin activation. Also check if should be hidden.
-		add_action( 'admin_notices', array( $this, 'admin_install_notice' ) );
-		
-		// Admin CSS
-		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_styles' ) );
-		
 	}
 	
 	/**
@@ -111,15 +103,6 @@ class Recipe_Rich_Pins_For_ZipList {
 	}
 
 	/**
-	 * Fired when the plugin is activated.
-	 *
-	 * @since    1.0.0
-	 */
-	public static function activate() {
-
-	}
-
-	/**
 	 * Return an instance of this class.
 	 *
 	 * @since     1.0.0
@@ -143,17 +126,6 @@ class Recipe_Rich_Pins_For_ZipList {
 	 */
 	public static function get_plugin_title() {
 		return __( 'Recipe Rich Pins for ZipList', 'rrpzl' );
-	}
-	
-	/*
-	 * Load admin CSS files
-	 * 
-	 * @since 1.0.0
-	 */
-	function enqueue_admin_styles() {
-		if( $this->viewing_this_plugin() ) {
-			wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'css/admin.css', __FILE__ ), array(), self::VERSION );
-		}
 	}
 
 	/**
@@ -216,16 +188,6 @@ class Recipe_Rich_Pins_For_ZipList {
 		else
 			return false;
 	}
-
-	/**
-	 * Show notice after plugin install/activate in admin dashboard until user acknowledges.
-	 * Also check if user chooses to hide it.
-	 *
-	 * @since   1.0.0
-	 */
-	public function admin_install_notice() {
-		
-	}
 	
 	/**
 	 * Render the post meta for this plugin.
@@ -246,20 +208,4 @@ class Recipe_Rich_Pins_For_ZipList {
 			include_once( 'views/post-meta-display.php' );
 		}
 	}
-	
-	
-	/**
-	 * Save the post meta for this plugin.
-	 *
-	 * @since    1.0.0
-	 *
-	 * @param   int  $post_id
-	 * @return  int  $post_id
-	 */
-	/*public function save_meta_data( $post_id ) {
-		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
-			return $post_id;
-
-		return $post_id;
-	}*/
 }

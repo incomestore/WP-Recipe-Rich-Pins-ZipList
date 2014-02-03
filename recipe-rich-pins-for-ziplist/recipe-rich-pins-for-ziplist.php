@@ -26,10 +26,5 @@ if ( ! defined( 'ABSPATH' ) )
 // Require the main class file
 require_once( plugin_dir_path( __FILE__ ) . 'class-recipe-rich-pins-for-ziplist.php' );
 
-/*
- * Register hooks that are fired when the plugin is activated or deactivated.
- * When the plugin is deleted, the uninstall.php file is loaded.
- */
-register_activation_hook( __FILE__, array( 'Recipe_Rich_Pins_For_ZipList', 'activate' ) );
 
 add_action( 'plugins_loaded', array( 'Recipe_Rich_Pins_For_ZipList', 'get_instance' ) );
