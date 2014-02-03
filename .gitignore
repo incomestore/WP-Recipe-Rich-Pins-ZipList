@@ -47,4 +47,4 @@ SyncToy*.dat
 
 # Netbeans IDE *
 ################
-/recipe-rich-pins/nbproject/*
+/recipe-rich-pins-for-ziplist/nbproject/*
