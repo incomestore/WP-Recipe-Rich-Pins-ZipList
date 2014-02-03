@@ -76,7 +76,7 @@ class Recipe_Rich_Pins_For_ZipList {
 		
 		// Calls for Post Meta stuff
 		add_action( 'add_meta_boxes', array( $this, 'display_post_meta') );
-		add_action( 'save_post', array( $this, 'save_meta_data') );
+		//add_action( 'save_post', array( $this, 'save_meta_data') );
 		
 		// Add admin notice after plugin activation. Also check if should be hidden.
 		add_action( 'admin_notices', array( $this, 'admin_install_notice' ) );
@@ -233,7 +233,18 @@ class Recipe_Rich_Pins_For_ZipList {
 	 * @since    1.0.0
 	 */
 	public function display_post_meta() {
-			
+		
+		// Add the meta boxes for pages and posts
+		add_meta_box( 'rrpzl-meta', 'Recipe Rich Pins for ZipList', 'rrpzl_add_meta_form', 'page', 'advanced', 'high' );
+		add_meta_box( 'rrpzl-meta', 'Recipe Rich Pins for ZipList', 'rrpzl_add_meta_form', 'post', 'advanced', 'high' );
+
+		// function to output the HTML for meta box
+		function rrpzl_add_meta_form( $post ) {
+
+			wp_nonce_field( basename( __FILE__ ), 'rrpzl_meta_nonce' );
+
+			include_once( 'views/post-meta-display.php' );
+		}
 	}
 	
 	
@@ -245,10 +256,10 @@ class Recipe_Rich_Pins_For_ZipList {
 	 * @param   int  $post_id
 	 * @return  int  $post_id
 	 */
-	public function save_meta_data( $post_id ) {
+	/*public function save_meta_data( $post_id ) {
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
 			return $post_id;
 
 		return $post_id;
-	}
+	}*/
 }
