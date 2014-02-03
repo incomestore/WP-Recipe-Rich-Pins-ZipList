@@ -76,6 +76,16 @@ class Recipe_Rich_Pins_For_ZipList {
 		
 		// Calls for Post Meta stuff
 		add_action( 'add_meta_boxes', array( $this, 'display_post_meta') );
+		
+		// Check if ZipList plugin is active
+		add_action( 'admin_notices', array( $this, 'check_for_ziplist' ) );
+	}
+	
+	public function check_for_ziplist() {
+		if ( ! function_exists( 'amd_zlrecipe_install' ) ) {
+			add_settings_error( 'rrpzl', 'ziplist-inactive', __( 'ZipList was not detected. Please install and activate ZipList before installing this plugin.', 'rrpzl' ), 'error' );
+			settings_errors( 'rrpzl' );
+		}
 	}
 	
 	/**
