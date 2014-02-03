@@ -20,7 +20,14 @@ if ( ! defined( 'ABSPATH' ) )
 function rrpzl_register_settings() {
 	$rrpzl_settings = array(
 		'general' => array(
-		
+			'og_site_name' => array(
+				'id'       => 'og_site_name',
+				'name'     => __( 'Open Graph Site Name', 'rrpzl' ),
+				'desc'     => __( 'A site-wide Open Graph tag (<code>og:site_name</code>) is recommended by Pinterest since <a href="http://www.schema.org" target="_blank">Schema.org</a> doesn\'t support a site name field. ', 'rrpzl' ) .
+					__( 'If another plugin is already generating this tag (such as WordPress SEO), you can clear out this value to prevent duplicate output.', 'rrpzl' ),
+				'type'     => 'text',
+				'size'     => 'regular-text'
+			)
 		)
 	);
 
@@ -81,164 +88,6 @@ function rrpzl_get_settings_field_args( $option, $section ) {
 	}
 
 	return $settings_args;
-}
-
-/*
- * Radio button callback function
- * 
- * @since 1.0.0
- */
-function rrpzl_radio_callback( $args ) {
-	global $rrpzl_options;
-
-	// Return empty string if no options.
-	if ( empty( $args['options'] ) ) {
-		echo '';
-		return;
-	}
-
-	$html = "\n";
-
-	foreach ( $args['options'] as $key => $option ) {
-		$checked = false;
-
-		if ( isset( $rrpzl_options[ $args['id'] ] ) && $rrpzl_options[ $args['id'] ] == $key )
-			$checked = true;
-		elseif ( isset( $args['std'] ) && $args['std'] == $key && ! isset( $rrpzl_options[ $args['id'] ] ) )
-			$checked = true;
-
-		$html .= '<input name="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . ']" id="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . '][' . $key . ']" type="radio" value="' . $key . '" ' . checked( true, $checked, false ) . '/>' . "\n";
-		$html .= '<label for="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . '][' . $key . ']">' . $option . '</label><br/>' . "\n";
-	}
-
-	// Render and style description text underneath if it exists.
-	if ( ! empty( $args['desc'] ) )
-		$html .= '<p class="description">' . $args['desc'] . '</p>' . "\n";
-
-	echo $html;
-}
-
-/*
- * Single checkbox callback function
- * 
- * @since 1.0.0
- */
-function rrpzl_checkbox_callback( $args ) {
-	global $rrpzl_options;
-	
-	$checked = isset( $rrpzl_options[$args['id']] ) ? checked( 1, $rrpzl_options[$args['id']], false ) : '';
-	$html = "\n" . '<input type="checkbox" id="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . ']" name="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . ']" value="1" ' . $checked . '/>' . "\n";
-
-	// Render description text directly to the right in a label if it exists.
-	if ( ! empty( $args['desc'] ) )
-		$html .= '<label for="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . ']"> '  . $args['desc'] . '</label>' . "\n";
-
-	echo $html;
-}
-
-/*
- * Multiple checkboxes callback function
- * 
- * @since 1.0.0
- */
-function rrpzl_multicheck_callback( $args ) {
-	global $rrpzl_options;
-
-	// Return empty string if no options.
-	if ( empty( $args['options'] ) ) {
-		echo '';
-		return;
-	}
-
-	$html = "\n";
-
-	foreach ( $args['options'] as $key => $option ) {
-		if ( isset( $rrpzl_options[$args['id']][$key] ) ) { $enabled = $option; } else { $enabled = NULL; }
-		$html .= '<input name="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . '][' . $key . ']" id="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . '][' . $key . ']" type="checkbox" value="' . $option . '" ' . checked($option, $enabled, false) . '/>' . "\n";
-		$html .= '<label for="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . '][' . $key . ']">' . $option . '</label><br/>' . "\n";
-	}
-
-	// Render and style description text underneath if it exists.
-	if ( ! empty( $args['desc'] ) )
-		$html .= '<p class="description">' . $args['desc'] . '</p>' . "\n";
-
-	echo $html;
-}
-
-/*
- * Select box callback function
- * 
- * @since 1.0.0
- */
-function rrpzl_select_callback( $args ) {
-	global $rrpzl_options;
-
-	// Return empty string if no options.
-	if ( empty( $args['options'] ) ) {
-		echo '';
-		return;
-	}
-
-	$html = "\n" . '<select id="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . ']" name="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . ']"/>' . "\n";
-
-	foreach ( $args['options'] as $option => $name ) :
-		$selected = isset( $rrpzl_options[$args['id']] ) ? selected( $option, $rrpzl_options[$args['id']], false ) : '';
-		$html .= '<option value="' . $option . '" ' . $selected . '>' . $name . '</option>' . "\n";
-	endforeach;
-
-	$html .= '</select>' . "\n";
-
-	// Render and style description text underneath if it exists.
-	if ( ! empty( $args['desc'] ) )
-		$html .= '<p class="description">' . $args['desc'] . '</p>' . "\n";
-
-	echo $html;
-}
-
-/*
- * Textarea callback function
- * 
- * @since 1.0.0
- */
-function rrpzl_textarea_callback( $args ) {
-	global $rrpzl_options;
-
-	if ( isset( $rrpzl_options[ $args['id'] ] ) )
-		$value = $rrpzl_options[ $args['id'] ];
-	else
-		$value = isset( $args['std'] ) ? $args['std'] : '';
-
-	// Ignoring size at the moment.
-	$html = "\n" . '<textarea class="large-text" cols="50" rows="10" id="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . ']" name="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . ']">' . esc_textarea( $value ) . '</textarea>' . "\n";
-
-	// Render and style description text underneath if it exists.
-	if ( ! empty( $args['desc'] ) )
-		$html .= '<p class="description">' . $args['desc'] . '</p>' . "\n";
-
-	echo $html;
-}
-
-/**
- * Number callback function
- * 
- * @since 1.0.0
- */
-function rrpzl_number_callback( $args ) {
-	global $rrpzl_options;
-
-	if ( isset( $rrpzl_options[ $args['id'] ] ) )
-		$value = $rrpzl_options[ $args['id'] ];
-	else
-		$value = isset( $args['std'] ) ? $args['std'] : '';
-
-	$size = ( isset( $args['size'] ) && ! is_null( $args['size'] ) ) ? $args['size'] : 'regular';
-	$html = "\n" . '<input type="number" class="' . $size . '-text" id="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . ']" name="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . ']" step="1" value="' . esc_attr( $value ) . '"/>' . "\n";
-
-	// Render description text directly to the right in a label if it exists.
-	if ( ! empty( $args['desc'] ) )
-		$html .= '<label for="rrpzl_settings_' . $args['section'] . '[' . $args['id'] . ']"> '  . $args['desc'] . '</label>' . "\n";
-
-	echo $html;
 }
 
 /**
