@@ -93,7 +93,21 @@ class Recipe_Rich_Pins_For_ZipList {
 	 *
 	 */
 	public function includes() {
+		global $rrpzl_options;
 		
+		include_once( 'includes/register-settings.php' );
+		
+		$rrpzl_options = rrpzl_get_settings();
+		
+		if( is_admin() ) {
+			// Admin includes
+			include_once( 'includes/admin-notices.php' );
+			// Misc functions
+			include_once( 'includes/misc-functions.php' );
+		} else {
+			// public includes
+			include_once( 'views/public.php' );
+		}
 	}
 
 	/**
