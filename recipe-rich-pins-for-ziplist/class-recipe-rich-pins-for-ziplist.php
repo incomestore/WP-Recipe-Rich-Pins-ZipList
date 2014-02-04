@@ -83,7 +83,7 @@ class Recipe_Rich_Pins_For_ZipList {
 	
 	public function check_for_ziplist() {
 		if ( ! function_exists( 'amd_zlrecipe_install' ) ) {
-			add_settings_error( 'rrpzl', 'ziplist-inactive', __( 'ZipList was not detected. Please install and activate ZipList before installing this plugin.', 'rrpzl' ), 'error' );
+			add_settings_error( 'rrpzl', 'zl-inactive', __( 'ZipList 2.2 is required to use \'' . $this->get_plugin_title() . '\'. Please install and activate ZipList.', 'rrpzl' ), 'error' );
 			settings_errors( 'rrpzl' );
 		}
 	}
