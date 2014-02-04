@@ -79,12 +79,31 @@ class Recipe_Rich_Pins_For_ZipList {
 		
 		// Check if ZipList plugin is active
 		add_action( 'admin_notices', array( $this, 'check_for_ziplist' ) );
+		
+		// Check WP version
+		add_action( 'admin_init', array( $this, 'check_wp_version' ) );
 	}
 	
 	public function check_for_ziplist() {
 		if ( ! function_exists( 'amd_zlrecipe_install' ) ) {
 			add_settings_error( 'rrpzl', 'zl-inactive', __( 'ZipList 2.2 is required to use \'' . $this->get_plugin_title() . '\'. Please install and activate ZipList.', 'rrpzl' ), 'error' );
 			settings_errors( 'rrpzl' );
+		}
+	}
+	
+	/**
+	 * Make sure user has the minimum required version of WordPress installed to use the plugin
+	 * 
+	 * @since 1.0.0
+	 */
+	public function check_wp_version() {
+		global $wp_version;
+		$required_wp_version = '3.5.2';
+		
+		if ( version_compare( $wp_version, $required_wp_version, '<' ) ) {
+			deactivate_plugins( RRPZL_MAIN_FILE ); 
+			wp_die( sprintf( __( $this->get_plugin_title() . ' requires WordPress version <strong>' . $required_wp_version . '</strong> to run properly. ' .
+				'Please update WordPress before reactivating this plugin. <a href="%s">Return to Plugins</a>.', 'rrpzl' ), get_admin_url( '', 'plugins.php' ) ) );
 		}
 	}
 	

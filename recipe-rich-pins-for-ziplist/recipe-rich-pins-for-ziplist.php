@@ -28,3 +28,6 @@ require_once( plugin_dir_path( __FILE__ ) . 'class-recipe-rich-pins-for-ziplist.
 
 
 add_action( 'plugins_loaded', array( 'Recipe_Rich_Pins_For_ZipList', 'get_instance' ) );
+
+define( 'RRPZL_MAIN_FILE', __FILE__ );
+
