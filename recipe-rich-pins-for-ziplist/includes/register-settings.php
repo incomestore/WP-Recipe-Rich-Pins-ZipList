@@ -140,7 +140,23 @@ function rrpzl_missing_callback( $args ) {
  * @since 1.0.0
  */
 function rrpzl_get_settings() {
-
+	
+	// Setup our defaults and tell the plugin it has already ran so we don't override options later
+	
+	if( ! get_option( 'rrpzl_settings_loaded' ) ) {
+		
+		// Default save settings option to on
+		$general = get_option( 'rrpzl_settings_general' );
+		
+		$general['og_site_name'] = get_bloginfo( 'title' );
+		
+		update_option( 'rrpzl_settings_general', $general );
+		
+		// Add option so we know defaults have been set
+		add_option( 'rrpzl_settings_loaded', 1 );
+		
+	}
+	
 	$general_settings = is_array( get_option( 'rrpzl_settings_general' ) ) ? get_option( 'rrpzl_settings_general' )  : array();
 
 	return array_merge( $general_settings );
