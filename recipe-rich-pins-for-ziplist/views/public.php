@@ -37,6 +37,6 @@ function rrpzl_add_url() {
 	
 	$permalink = get_permalink( $post->ID );
 	
-	echo '<link rel="canonical" href="' . $permalink . '" />';
+	echo '<meta itemprop="url" href="' . $permalink . '" />';
 }
 add_action( 'wp_head', 'rrpzl_add_url' );
