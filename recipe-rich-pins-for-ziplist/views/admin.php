@@ -40,6 +40,10 @@ global $rrpzl_options;
 			</div><!-- #container -->
 
 		</div><!-- #rrpzl-settings-content -->
+		
+		<div id="rrpzl-settings-sidebar">
+			<?php include_once( 'admin-sidebar.php' ); ?>
+		</div>
 	</div>
 
 </div><!-- .wrap -->
