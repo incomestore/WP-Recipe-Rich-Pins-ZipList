@@ -1,12 +1,12 @@
 === Recipe Rich Pins for ZipList ===
 Contributors: pderksen, nickyoung87
-Tags: 
+Tags: TODO
 Requires at least: 3.5.2
 Tested up to: 3.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Description.
+TODO Description.
 
 = Requirements =
 
