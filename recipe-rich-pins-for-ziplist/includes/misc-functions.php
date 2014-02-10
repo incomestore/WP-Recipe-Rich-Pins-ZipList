@@ -30,3 +30,17 @@ function rrpzl_get_pib_downloads() {
 	
 	return number_format_i18n( $plugin_info->downloaded );
 }
+
+/**
+ * Function to check if PIB Lite or PIB Pro are active
+ * 
+ * @since 1.0.0
+ * 
+ * @return bool
+ */
+function is_pib_active() {
+	if( class_exists( 'Pinterest_Pin_It_Button' ) || class_exists( 'Pinterest_Pin_It_Button_Pro' ) ) 
+		return true;
+	
+	return false;
+}
