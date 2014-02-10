@@ -38,7 +38,7 @@ function rrpzl_get_pib_downloads() {
  * 
  * @return bool
  */
-function is_pib_active() {
+function rrpzl_is_pib_active() {
 	if( class_exists( 'Pinterest_Pin_It_Button' ) || class_exists( 'Pinterest_Pin_It_Button_Pro' ) ) 
 		return true;
 	
