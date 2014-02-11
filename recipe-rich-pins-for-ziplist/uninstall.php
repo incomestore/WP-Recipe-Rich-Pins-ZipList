@@ -12,3 +12,4 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 }
 
 delete_option( 'rrpzl_settings_general' );
+delete_option( 'rrpzl_settings_loaded' );
