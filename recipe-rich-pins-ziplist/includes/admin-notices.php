@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) )
  */
 function rrpzl_register_admin_notices() { 
 	
-	if ( ( isset( $_GET['page'] ) && 'recipe-rich-pins-for-ziplist' == $_GET['page'] ) && ( isset( $_GET['settings-updated'] ) && 'true' == $_GET['settings-updated'] ) ) {
+	if ( ( isset( $_GET['page'] ) && 'recipe-rich-pins-ziplist' == $_GET['page'] ) && ( isset( $_GET['settings-updated'] ) && 'true' == $_GET['settings-updated'] ) ) {
 		add_settings_error( 'rrpzl-notices', 'rrpzl-general-updated', __( 'Settings updated.', 'rrpzl' ), 'updated' );
 	}
 

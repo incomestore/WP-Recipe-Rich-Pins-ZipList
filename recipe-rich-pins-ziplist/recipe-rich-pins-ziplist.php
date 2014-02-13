@@ -10,7 +10,7 @@
  *
  * @wordpress-plugin
  * Plugin Name: Recipe Rich Pins for ZipList
- * Plugin URI: TODO http://pinterestplugin.com/recipe-rich-pins-for-ziplist/
+ * Plugin URI: http://pinterestplugin.com/recipe-rich-pins-ziplist/
  * Description: TODO
  * Version: 1.0.0
  * Author: Phil Derksen
@@ -24,8 +24,8 @@ if ( ! defined( 'ABSPATH' ) )
 	exit;
 
 // Require the main class file
-require_once( plugin_dir_path( __FILE__ ) . 'class-recipe-rich-pins-for-ziplist.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'class-recipe-rich-pins-ziplist.php' );
 
-add_action( 'plugins_loaded', array( 'Recipe_Rich_Pins_For_ZipList', 'get_instance' ) );
+add_action( 'plugins_loaded', array( 'Recipe_Rich_Pins_ZipList', 'get_instance' ) );
 
 define( 'RRPZL_MAIN_FILE', __FILE__ );

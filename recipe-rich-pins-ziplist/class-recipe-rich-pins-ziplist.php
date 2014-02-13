@@ -10,7 +10,7 @@
 if ( ! defined( 'ABSPATH' ) )
 	exit;
 
-class Recipe_Rich_Pins_For_ZipList {
+class Recipe_Rich_Pins_ZipList {
 
 	/**
 	 * Plugin version, used for cache-busting of style and script file references.
@@ -38,7 +38,7 @@ class Recipe_Rich_Pins_For_ZipList {
 	 *
 	 * @var      string
 	 */
-	protected $plugin_slug = 'recipe-rich-pins-for-ziplist';
+	protected $plugin_slug = 'recipe-rich-pins-ziplist';
 
 	/**
 	 * Instance of this class.
