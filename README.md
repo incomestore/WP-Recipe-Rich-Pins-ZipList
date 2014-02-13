@@ -1,6 +1,4 @@
-WP-Recipe-Rich-Pins
-===================
+Recipe Rich Pins for WordPress
+===
 
-Pinterest Recipe Rich Pins for WordPress
-
-Currently this requires the [ZipList WordPress plugin](http://wordpress.org/plugins/ziplist-recipe-plugin/).
+A WordPress plugin to add Pinterest rich pin meta data to your recipes built with the [ZipList WordPress plugin](http://wordpress.org/plugins/ziplist-recipe-plugin/) (requirement).
