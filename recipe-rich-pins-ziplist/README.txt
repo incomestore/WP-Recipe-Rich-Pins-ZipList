@@ -11,6 +11,8 @@ Add recipe rich pin meta data to your ZipList recipes for enhanced pins on Pinte
 
 == Description ==
 
+Add recipe rich pin meta data to your ZipList recipes for enhanced pins on Pinterest.
+
 ZipList does most of the work. We just add a couple things to help.
 
 Basically, we add any missing [Schema.org](http://schema.org) meta tags Pinterest requires that ZipList doesn't provide, along with a link to verify each recipe when you're editing a post.
