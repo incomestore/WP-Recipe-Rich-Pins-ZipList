@@ -21,6 +21,8 @@ References:
 
 [Rich Pin Validator](http://developers.pinterest.com/rich_pins/validator/)
 
+[Follow this project on Github](https://github.com/pderksen/WP-Recipe-Rich-Pins-ZipList).
+
 = Requirements =
 
 * WordPress 3.5.2 or higher
