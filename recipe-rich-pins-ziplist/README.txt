@@ -11,7 +11,7 @@ Add recipe rich pin meta data to your ZipList recipes for enhanced pins on Pinte
 
 == Description ==
 
-If you're using the [ZipList recipe plugin](http://wordpress.org/plugins/ziplist-recipe-plugin/), your recipe posts already output most of the fields you need for rich pins.
+If you're using the [ZipList recipe plugin](http://wordpress.org/plugins/ziplist-recipe-plugin/), your recipe posts already outputs most of the fields you need for rich pins.
 
 This plugin simply adds any missing [Schema.org](http://schema.org) meta tags and provides a link on each post edit screen to quickly validate all fields with Pinterest.
 
