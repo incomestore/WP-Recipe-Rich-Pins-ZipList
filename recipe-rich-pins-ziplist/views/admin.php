@@ -23,8 +23,6 @@ global $rrpzl_options;
 
 	<div id="rrpzl-settings">
 		<div id="rrpzl-settings-content">
-
-			<?php screen_icon( 'post' ); ?>
 			<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
 
 			<div id="container">
