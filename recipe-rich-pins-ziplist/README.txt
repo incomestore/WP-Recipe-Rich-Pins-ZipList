@@ -1,7 +1,7 @@
 === Recipe Rich Pins for ZipList ===
 Contributors: pderksen, nickyoung87
 Tags: pinterest, rich pins, recipes, ziplist, recipe rich pins
-Requires at least: 3.5.2
+Requires at least: 3.6.1
 Tested up to: 3.9
 Stable tag: trunk
 License: GPLv2 or later
@@ -25,7 +25,7 @@ References:
 
 = Requirements =
 
-* WordPress 3.5.2 or higher
+* WordPress 3.6.1 or higher
 * ZipList recipe plugin 2.2 or higher
 
 == Installation ==
@@ -69,6 +69,10 @@ Make sure to select the data format **"HTML Tags"**, then click "Apply Now". At 
 After you've been approved by Pinterest, you can revisit any validation link again to check.
 
 == Changelog ==
+
+= 1.0.1 =
+
+* Tested up to WordPress 3.9.
 
 = 1.0.0 =
 
