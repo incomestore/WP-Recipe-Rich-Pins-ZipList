@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Recipe Rich Pins for ZipList
  *
@@ -17,15 +18,18 @@
  * Author URI: http://philderksen.com
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ * GitHub Plugin URI: https://github.com/pderksen/WP-Recipe-Rich-Pins-ZipList
  */
 
 // Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) )
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
+}
 
-// Require the main class file
+if ( ! defined( 'RRPZL_MAIN_FILE' ) ) {
+	define ( 'RRPZL_MAIN_FILE', __FILE__ );
+}
+
 require_once( plugin_dir_path( __FILE__ ) . 'class-recipe-rich-pins-ziplist.php' );
 
 add_action( 'plugins_loaded', array( 'Recipe_Rich_Pins_ZipList', 'get_instance' ) );
-
-define( 'RRPZL_MAIN_FILE', __FILE__ );
