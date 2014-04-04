@@ -11,6 +11,11 @@
  * @copyright 2014 Phil Derksen
  */
 
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /*
  * Add og:site_name to the header of the site
  * 

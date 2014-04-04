@@ -1,5 +1,10 @@
 <?php
 
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Get domain name without "http" & "www". Leave subdomain if no "www". Usually pass in home_url().
  * Purpose is to link to http://www.pinterest.com/source/[domain.com]/
