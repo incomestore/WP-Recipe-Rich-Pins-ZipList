@@ -65,6 +65,8 @@ class Recipe_Rich_Pins_ZipList {
 	 */
 	private function __construct() {
 		
+		$this->setup_constants();
+		
 		// Load includes
 		add_action( 'init', array( $this, 'includes' ), 1 );
 
@@ -85,6 +87,13 @@ class Recipe_Rich_Pins_ZipList {
 		
 		// Enqueue admin styles
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_styles' ) );
+	}
+	
+	
+	public function setup_constants() {
+		if( ! defined( 'PINPLUGIN_BASE_URL' ) ) {
+			define( 'PINPLUGIN_BASE_URL', 'http://pinplugins.com/' );
+		}
 	}
 	
 	public function check_for_ziplist() {

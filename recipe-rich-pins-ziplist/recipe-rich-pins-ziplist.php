@@ -5,12 +5,12 @@
  * @package   RRPZL
  * @author    Phil Derksen <pderksen@gmail.com>, Nick Young <mycorpweb@gmail.com>
  * @license   GPL-2.0+
- * @link      http://pinterestplugin.com
+ * @link      http://pinplugins.com
  * @copyright 2014 Phil Derksen
  *
  * @wordpress-plugin
  * Plugin Name: Recipe Rich Pins for ZipList
- * Plugin URI: http://pinterestplugin.com/recipe-rich-pins-ziplist/
+ * Plugin URI: http://pinplugins.com/recipe-rich-pins-ziplist/
  * Description: Add recipe rich pin meta data to your ZipList recipes for enhanced pins on Pinterest.
  * Version: 1.0.0
  * Author: Phil Derksen
