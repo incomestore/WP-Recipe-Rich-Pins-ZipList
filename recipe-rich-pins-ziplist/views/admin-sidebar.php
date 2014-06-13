@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php _e( "Help us get noticed (and boost our egos) with a rating and short review.", 'rrpzl' ); ?>
 		</p>
 
-		<a href="http://wordpress.org/support/view/plugin-reviews/recipe-rich-pins-ziplist" class="" target="_blank">
+		<a href="http://wordpress.org/support/view/plugin-reviews/recipe-rich-pins-ziplist" class="button-primary" target="_blank">
 			<?php _e( 'Rate this plugin on WordPress.org', 'rrpzl' ); ?></a>
 	</div>
 </div>
@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					's'    => urlencode('"pinterest pin it button"')
 				), admin_url( 'plugin-install.php' ) ); ?>" class="">
 				<?php _e( 'Get the Free "Pin It" Button plugin', 'rrpzl' ); ?></a><br/>
-			<a href="http://wordpress.org/plugins/pinterest-pin-it-button/" target="_blank"><?php _e( 'Visit the "Pin It" Button plugin page', 'rrpzl' ); ?></a>
+			<a href="http://wordpress.org/plugins/pinterest-pin-it-button/" target="_blank" class="button-primary"><?php _e( 'Visit the "Pin It" Button plugin page', 'rrpzl' ); ?></a>
 		</p>
 	</div>
 </div>
