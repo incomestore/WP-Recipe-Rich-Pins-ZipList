@@ -2,7 +2,7 @@
 Contributors: pderksen, nickyoung87
 Tags: pinterest, rich pins, recipes, ziplist, recipe rich pins
 Requires at least: 3.6.1
-Tested up to: 3.9
+Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -69,6 +69,10 @@ Make sure to select the data format **"HTML Tags"**, then click "Apply Now". At 
 After you've been approved by Pinterest, you can revisit any validation link again to check.
 
 == Changelog ==
+
+= 1.0.2 =
+
+* Tested with WordPress 4.0
 
 = 1.0.1 =
 
