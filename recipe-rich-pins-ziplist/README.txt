@@ -1,7 +1,7 @@
 === Recipe Rich Pins for ZipList ===
 Contributors: pderksen, nickyoung87
 Tags: pinterest, rich pins, recipes, ziplist, recipe rich pins
-Requires at least: 3.6.1
+Requires at least: 3.7.4
 Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2 or later
