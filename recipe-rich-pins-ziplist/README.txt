@@ -25,7 +25,7 @@ References:
 
 = Requirements =
 
-* ZipList recipe plugin 2.2 or higher
+* [ZipList recipe plugin](http://wordpress.org/plugins/ziplist-recipe-plugin/) 2.6 or higher
 
 == Installation ==
 
