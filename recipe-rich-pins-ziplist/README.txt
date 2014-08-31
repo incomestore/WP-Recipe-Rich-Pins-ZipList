@@ -25,7 +25,6 @@ References:
 
 = Requirements =
 
-* WordPress 3.6.1 or higher
 * ZipList recipe plugin 2.2 or higher
 
 == Installation ==
