@@ -17,7 +17,7 @@ This plugin simply adds any missing [Schema.org](http://schema.org) meta tags an
 
 References:
 
-[Rich Pin Specifications](http://developers.pinterest.com/rich_pins/)
+[Rich Pin Specifications](https://developers.pinterest.com/rich_pins_recipe/)
 
 [Rich Pin Validator](http://developers.pinterest.com/rich_pins/validator/)
 
