@@ -14,35 +14,76 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="sidebar-container">
-	<div class="sidebar-content">
-		<p>
-			<?php _e( "Help us get noticed (and boost our egos) with a rating and short review.", 'rrpzl' ); ?>
-		</p>
+<?php if ( ! rrpzl_is_pib_pro_active() ): // If "Pin It" Button Pro is already active don't show. ?>
 
-		<a href="http://wordpress.org/support/view/plugin-reviews/recipe-rich-pins-ziplist" class="button-primary" target="_blank">
-			<?php _e( 'Rate this plugin on WordPress.org', 'rrpzl' ); ?></a>
+	<!-- Use some built-in WP admin theme styles. -->
+
+	<div class="sidebar-container metabox-holder">
+		<div class="postbox">
+			<h3 class="wp-ui-primary"><span><?php _e( 'Need an awesome "Pin It" button?', 'rrpzl' ); ?></span></h3>
+			<div class="inside">
+				<div class="main">
+					<ul>
+						<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Add "Pin It" buttons on image hover', 'rrpzl' ); ?></li>
+						<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Add "Pin It" buttons under images', 'rrpzl' ); ?></li>
+						<li><div class="dashicons dashicons-yes"></div> <?php _e( '30 custom "Pin It" button designs', 'rrpzl' ); ?></li>
+						<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Upload your own button designs', 'rrpzl' ); ?></li>
+						<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Twitter, Facebook & G+ buttons', 'rrpzl' ); ?></li>
+						<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Use with featured images', 'rrpzl' ); ?></li>
+						<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Use with custom post types', 'rrpzl' ); ?></li>
+
+						<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Automatic updates & email support', 'rrpzl' ); ?></li>
+					</ul>
+
+					<p class="last-blurb centered">
+						<?php _e( 'Get all of these and more with Pinterest "Pin It" Button Pro!', 'rrpzl' ); ?>
+					</p>
+
+					<div class="centered">
+						<a href="<?php echo rrpzl_ga_campaign_url( PINPLUGIN_BASE_URL . 'pin-it-button-pro/', 'recipe_rich_pins', 'sidebar_link', 'pro_upgrade' ); ?>"
+						   class="button-primary button-large" target="_blank">
+							<?php _e( 'Get "Pin It" Pro Now', 'rrpzl' ); ?></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<?php endif; // End "Pin It" Button Pro check. ?>
+
+<div class="sidebar-container metabox-holder">
+	<div class="postbox">
+		<div class="inside">
+			<p>
+				<?php _e( 'Now accepting 5-star reviews! It only takes seconds and means a lot.', 'rrpzl' ); ?>
+			</p>
+			<div class="centered">
+				<a href="http://wordpress.org/support/view/plugin-reviews/recipe-rich-pins-ziplist" class="button-primary" target="_blank">
+					<?php _e( 'Rate this Plugin Now', 'rrpzl' ); ?></a>
+			</div>
+		</div>
 	</div>
 </div>
 
-<?php if( ! rrpzl_is_pib_active() ) { ?>
-<div class="sidebar-container">
-	<h3 class="sidebar-title-large"><?php _e( 'Need more Pinterest traffic?', 'rrpzl' ); ?></h3>
-
-	<div class="sidebar-content">
-		<p>
-			<?php _e( 'Check out our Pinterest "Pin It" Button plugin. Now with <strong>' . rrpzl_get_pib_downloads() . '</strong> downloads!', 'rrpzl' ); ?>
-		</p>
-
-		<p class="small-text">
-			<a href="<?php echo add_query_arg( array(
-					'tab'  => 'search',
-					'type' => 'term',
-					's'    => urlencode('"pinterest pin it button"')
-				), admin_url( 'plugin-install.php' ) ); ?>" class="">
-				<?php _e( 'Get the Free "Pin It" Button plugin', 'rrpzl' ); ?></a><br/>
-			<a href="http://wordpress.org/plugins/pinterest-pin-it-button/" target="_blank" class="button-primary"><?php _e( 'Visit the "Pin It" Button plugin page', 'rrpzl' ); ?></a>
-		</p>
+<div class="sidebar-container metabox-holder">
+	<div class="postbox">
+		<div class="inside">
+			<ul>
+				<li>
+					<div class="dashicons dashicons-arrow-right-alt2"></div>
+					<a href="http://wordpress.org/support/plugin/recipe-rich-pins-ziplist" target="_blank">
+						<?php _e( 'Community Support Forums', 'rrpzl' ); ?></a>
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>
-<?php } ?>
+
+<div class="sidebar-container metabox-holder">
+	<div class="postbox">
+		<h3><?php _e( 'Recent News from pinplugins.com', 'rrpzl' ); ?></h3>
+		<div class="inside">
+			<?php rrpzl_rss_news(); ?>
+		</div>
+	</div>
+</div>
