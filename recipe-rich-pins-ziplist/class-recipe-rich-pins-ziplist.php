@@ -27,7 +27,7 @@ class Recipe_Rich_Pins_ZipList {
 	 * and README.txt changelog
 	 **************************************/
 
-	const VERSION = '1.0.2';
+	const VERSION = '1.0.3';
 
 	/**
 	 * Unique identifier for your plugin.

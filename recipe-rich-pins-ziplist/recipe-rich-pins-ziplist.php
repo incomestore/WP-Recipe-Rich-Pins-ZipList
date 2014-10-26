@@ -13,7 +13,7 @@
  * Plugin Name: Recipe Rich Pins for ZipList
  * Plugin URI: http://pinplugins.com/recipe-rich-pins-ziplist/
  * Description: Add recipe rich pin meta data to your ZipList recipes for enhanced pins on Pinterest.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Phil Derksen
  * Author URI: http://philderksen.com
  * License: GPL-2.0+

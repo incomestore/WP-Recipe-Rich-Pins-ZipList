@@ -69,6 +69,10 @@ After you've been approved by Pinterest, you can revisit any validation link aga
 
 == Changelog ==
 
+= 1.0.3 =
+
+* Made i18n ready.
+
 = 1.0.2 =
 
 * Tested with WordPress 4.0
