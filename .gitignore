@@ -44,3 +44,8 @@ Thumbs.db
 # Netbeans IDE *
 ################
 /recipe-rich-pins-ziplist/nbproject/*
+
+# i18n Files *
+################
+/*.pot
+/*.mo
