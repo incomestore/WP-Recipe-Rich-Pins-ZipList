@@ -68,6 +68,9 @@ class Recipe_Rich_Pins_ZipList {
 		
 		$this->setup_constants();
 		
+		// Load text domain
+		add_action( 'plugins_loaded', array( $this, 'plugin_textdomain' ) );
+		
 		// Load includes
 		add_action( 'init', array( $this, 'includes' ), 1 );
 
@@ -267,5 +270,16 @@ class Recipe_Rich_Pins_ZipList {
 			// Plugin admin CSS. Tack on plugin version.
 			wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'css/admin.css', __FILE__ ), array(), self::VERSION );
 		}
+	}
+	
+	/**
+	 * Load the plugin text domain for translation.
+	 */
+	public function plugin_textdomain() {
+		load_plugin_textdomain(
+			'rrpzl',
+			false,
+			dirname( plugin_basename( RRPZL_MAIN_FILE ) ) . '/languages/'
+		);
 	}
 }
