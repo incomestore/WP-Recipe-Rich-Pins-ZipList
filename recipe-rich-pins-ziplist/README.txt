@@ -75,7 +75,7 @@ After you've been approved by Pinterest, you can revisit any validation link aga
 
 = 1.0.2 =
 
-* Tested with WordPress 4.0
+* Tested with WordPress 4.0.
 
 = 1.0.1 =
 
