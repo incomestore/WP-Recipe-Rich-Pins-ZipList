@@ -1,8 +1,8 @@
 === Recipe Rich Pins for ZipList ===
 Contributors: pderksen, nickyoung87
 Tags: pinterest, rich pins, recipes, ziplist, recipe rich pins
-Requires at least: 3.8.5
-Tested up to: 4.1
+Requires at least: 3.7.5
+Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -10,6 +10,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Add recipe rich pin meta data to your ZipList recipes for enhanced pins on Pinterest.
 
 == Description ==
+
+**ZipList is officially shut down as of December 10, 2014. This plugin will no longer function nor receive any new updates.**
+
+**We recommend [Easy Recipe Plus](http://www.easyrecipeplugin.com/) as it includes recipe rich pin features alongside being a great recipe plugin replacement.**
 
 If you're using the [ZipList recipe plugin](http://wordpress.org/plugins/ziplist-recipe-plugin/), your recipe posts already outputs most of the fields you need for rich pins.
 
@@ -21,11 +25,7 @@ References:
 
 [Rich Pin Validator](http://developers.pinterest.com/rich_pins/validator/)
 
-[Follow this project on Github](https://github.com/pderksen/WP-Recipe-Rich-Pins-ZipList).
-
-= Requirements =
-
-* [ZipList recipe plugin](http://wordpress.org/plugins/ziplist-recipe-plugin/) 2.6 or higher
+[Follow this project on Github](https://github.com/pderksen/WP-Recipe-Rich-Pins-ZipList)
 
 == Installation ==
 
@@ -71,8 +71,7 @@ After you've been approved by Pinterest, you can revisit any validation link aga
 
 = 1.0.3 =
 
-* Tested with WordPress 4.1.
-* Made i18n ready.
+* Plugin development halted due to ZipList shutting down December 10, 2014.
 
 = 1.0.2 =
 
@@ -85,3 +84,9 @@ After you've been approved by Pinterest, you can revisit any validation link aga
 = 1.0.0 =
 
 * Initial release.
+
+== Update Notice ==
+
+ZipList is officially shut down as of December 10, 2014. This plugin will no longer function nor receive any new updates.
+
+**We recommend [Easy Recipe Plus](http://www.easyrecipeplugin.com/) as it includes recipe rich pin features alongside being a great recipe plugin replacement.**
