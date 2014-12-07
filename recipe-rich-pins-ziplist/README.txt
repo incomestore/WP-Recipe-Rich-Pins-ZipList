@@ -85,7 +85,7 @@ After you've been approved by Pinterest, you can revisit any validation link aga
 
 * Initial release.
 
-== Update Notice ==
+== Upgrade Notice ==
 
 ZipList is officially shut down as of December 10, 2014. This plugin will no longer function nor receive any new updates.
 
